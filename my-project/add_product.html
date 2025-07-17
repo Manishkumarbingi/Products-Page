@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./src/style.css" rel="stylesheet">
+    <title>Add Product</title>
+</head>
+
+<body class="bg-black">
+    <a href="index.html" class="flex justify-center items-center fixed top-0 w-full bg-black z-50">
+        <p class="text-white text-5xl p-2 m-2" ><span class="text-red-600">M</span>anish
+            Store</p>
+        </a>
+
+    <div class="w-full max-w-3xl mt-30 mx-auto my-10 border-2 border-white rounded-4xl p-6 bg-black">
+        <a href="index.html" class="w-full flex justify-end" >
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 bg-violet-400 rounded-full p-2 text-white"
+                viewBox="0 0 384 512">
+                <path fill="currentColor"
+                    d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+            </svg>
+        </a>
+
+        <form id="productForm" class="flex flex-col items-center text-white space-y-4 mt-4 w-full">
+            <div class="w-full max-w-md">
+                <input id="productName" type="text" placeholder="Enter the Product name"
+                    class="bg-white text-black w-full p-3 rounded" required>
+                <span id="errorName" class="text-red-400 text-sm"></span>
+            </div>
+
+            <div class="w-full max-w-md">
+                <input id="productPrice" type="number" placeholder="Enter the Product Price"
+                    class="bg-white text-black w-full p-3 rounded" required>
+                <span id="errorPrice" class="text-red-400 text-sm"></span>
+            </div>
+
+            <div class="w-full max-w-md">
+                <input id="productUrl" type="url" placeholder="Enter the Product URL"
+                    class="bg-white text-black w-full p-3 rounded">
+                <span id="errorUrl" class="text-red-400 text-sm"></span>
+            </div>
+
+            <div class="w-full max-w-md">
+                <textarea id="productDescription" placeholder="Enter the Product Description"
+                    class="bg-white text-black w-full p-3 rounded"></textarea>
+            </div>
+            
+
+            <div class="flex justify-between w-full max-w-md pt-6">
+                <button type="submit" class="text-white bg-orange-400 text-lg px-6 py-2 rounded-full">Submit</button>
+                <button type="reset" class="text-white bg-green-400 text-lg px-6 py-2 rounded-full">Reset</button>
+            </div>
+            <p id="submitMessage" class="text-center text-lg mt-4 font-semibold"></p>
+        </form>
+
+    </div>
+    <script src="src/add_product.js"></script>
+
+    <footer>
+        <p class="text-gray-400 text-center">@ This website is created by Manish Kumar Bingi</p>
+    </footer>
+</body>
+
+</html>
