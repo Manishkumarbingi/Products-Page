@@ -59,11 +59,11 @@ app.put('/products/:id', (req, res) => {
     return res.status(404).send('Product not found');
   }
  
-  const { name, description, imageUrl } = req.body;
+  const { name,price, imageUrl, description } = req.body;
   product.name = name || product.name;
   product.description = description || product.description;
   product.imageUrl = imageUrl || product.imageUrl;
- 
+  product.price=price || product.price;
   res.json(product);
 });
  

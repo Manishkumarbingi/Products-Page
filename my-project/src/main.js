@@ -23,12 +23,16 @@ const loadProducts = async () => {
     let element = document.createElement("div");
     element.className = "card rounded-4xl m-5 p-5 flex flex-col justify-center items-center border-b-white border-2";
     element.innerHTML = `
-      <img class="h-80 md:h-70 lg:h-60 xl:h-50 rounded-2xl" src="${product.imageUrl}">
-      <p class="name p-2 text-4xl lg:text-3xl text-orange-400">${product.name}</p>
-      <p class="price p-2 text-green-400 text-3xl lg:text-2xl lg:p-1">&#8377; ${product.price}</p>
-      <p class="description w-full text-2xl truncate overflow-hidden whitespace-nowrap">${product.description}</p>
-    `;
+    <img class="h-80 md:h-70 lg:h-60 xl:h-50 rounded-2xl" src="${product['imageUrl']}">
+      <p class="name p-2 text-4xl lg:text-3xl text-orange-400">${product['name']}</p>
+      <p class="price p-2 text-green-400 text-3xl lg:text-2xl lg:p-1 ">&#8377; ${product['price']}</p>
+      <p class="description w-full  text-2xl truncate overflow-hidden whitespace-nowrap">${product['description']}</p>
+    `
+    
     products_display.appendChild(element);
+    element.addEventListener("click",()=>{
+      window.location.href=`product.html?id=${product['id']}`
+    })
   });
 };
  
@@ -37,7 +41,7 @@ loadProducts();
  
  
  
-});
+
 
 
 
